@@ -1,0 +1,34 @@
+<div class="container ">
+    <div class="text-left mb-3 mt-3">
+        <button type="button" class="btn btn-info swadow" (click)="redirigir()">
+            Nuevo Alumno
+        </button>
+    </div>
+    <div class="card ">
+        <div class="card-header text-center bg-primary text-white">
+            Listado Alumnos
+        </div>
+        <div class="card-body">
+            <div class="card-title">
+                Alumnos          
+            </div>     
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead >
+                        <th *ngFor="let columna of nombreColumnas">{{columna}}</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let alumno of alumnos">
+                            <td>{{alumno.idAlumno}}</td>
+                            <td>{{alumno.numeroControl}}</td>
+                            <td>{{alumno.nombre}}</td>
+                            <td>{{alumno.email}}</td>
+                            <td>{{alumno.fechaRegistro}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>       
+        </div>
+    </div>
+</div>
